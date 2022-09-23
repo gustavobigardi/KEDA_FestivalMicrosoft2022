@@ -5,7 +5,8 @@ metadata:
   name: consumer-scaledobject
 spec:
   scaleTargetRef:
-    name: consumer
+    name: keda-consumer
+  cooldownPeriod: 15
   pollingInterval: 5
   minReplicaCount: 1
   maxReplicaCount: 30
@@ -13,5 +14,6 @@ spec:
   - type: azure-servicebus
     metadata:
       connectionFromEnv: ConnectionStrings__AzureServiceBus
-      queueName: demo
+      topicName: demo
+      subscriptionName: SubKeda
       messageCount: "50"
