@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: keda-consumer
+spec:
+  selector:
+    matchLabels:
+      app: keda-consumer
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: keda-consumer
+    spec:
+      containers:
+      - name: keda-consumer
+        image: keda-consumer
+        imagePullPolicy: Never
+        env:
+        - name: ConnectionStrings__AzureServiceBus
+          valueFrom:
+            secretKeyRef:
+              name: consumer-secrets
+              key: ConnectionAzureServiceBus

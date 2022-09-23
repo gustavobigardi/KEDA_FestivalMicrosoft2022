@@ -1,0 +1,19 @@
+# Documentação: https://keda.sh/docs/2.8/scalers/azure-service-bus/
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: consumer-scaledobject
+spec:
+  scaleTargetRef:
+    name: consumer
+  cooldownPeriod: 15
+  pollingInterval: 5
+  minReplicaCount: 1
+  maxReplicaCount: 10
+  triggers:
+  - type: azure-servicebus
+    metadata:
+      connectionFromEnv: ConnectionStrings__AzureServiceBus
+      queueName: queue-testes
+      messageCount: "10"
+      activationMessageCount: "1"

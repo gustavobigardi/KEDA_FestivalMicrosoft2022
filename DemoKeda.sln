@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{43BB739B-63FA-4BB4-9341-382373C66039}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keda.ServiceBus.Consumer", "src\Keda.ServiceBus.Consumer\Keda.ServiceBus.Consumer.csproj", "{D1852E2C-1FE7-437B-8A01-A5716E38F760}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keda.ServiceBus.Producer", "src\Keda.ServiceBus.Producer\Keda.ServiceBus.Producer.csproj", "{01FA9A0E-FE1B-4548-ABD6-3834F6B46066}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1852E2C-1FE7-437B-8A01-A5716E38F760}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1852E2C-1FE7-437B-8A01-A5716E38F760}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1852E2C-1FE7-437B-8A01-A5716E38F760}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1852E2C-1FE7-437B-8A01-A5716E38F760}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01FA9A0E-FE1B-4548-ABD6-3834F6B46066}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01FA9A0E-FE1B-4548-ABD6-3834F6B46066}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01FA9A0E-FE1B-4548-ABD6-3834F6B46066}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01FA9A0E-FE1B-4548-ABD6-3834F6B46066}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D1852E2C-1FE7-437B-8A01-A5716E38F760} = {43BB739B-63FA-4BB4-9341-382373C66039}
+		{01FA9A0E-FE1B-4548-ABD6-3834F6B46066} = {43BB739B-63FA-4BB4-9341-382373C66039}
+	EndGlobalSection
+EndGlobal
